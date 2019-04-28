@@ -63,19 +63,19 @@ while True:
         print("Category:")
         print(display_category)
         #list_dessert.append(recipeName)
-        if display_category == 'Dessert':
+        if display_category.lower() == 'dessert':
             dict_dessert[recipeName] = display_ingredients
             print ("Dessert Details")
             print(dict_dessert)
             list_dessert.append(recipeName)
             dict_categories[display_category] = list_dessert
-        elif display_category == 'Main Course':
+        elif display_category.lower() == 'main course':
             dict_maincourse[recipeName] = display_ingredients
             print ("Main Course Details")
             print(dict_maincourse)
             list_maincourse.append(recipeName)
             dict_categories[display_category] = list_maincourse
-        elif display_category == 'Starter':
+        elif display_category.lower() == 'starter':
             dict_starter[recipeName] = display_ingredients
             print ("Starter Details")
             print(dict_starter)
@@ -85,9 +85,23 @@ while True:
             print ("Category doesn't exist")
         print (dict_categories)
     elif menu_selection == 2:
-        pass
+        for list in list_dessert:
+            print (list)
+        for list in list_maincourse:
+            print (list)
+        for list in list_starter:
+            print (list)
     elif menu_selection == 3:
-        pass
+        selection_category = input("Enter recipe category to list: ") 
+        print ("Selection Category: {}".format (selection_category))
+        if selection_category.lower() == 'dessert':
+            print (list_dessert)
+        elif selection_category.lower() == 'main course':
+            print (list_maincourse)
+        elif selection_category.lower() == 'starter': 
+            print (list_starter)
+        else:
+            print ("Category doesn't exist")   
     elif menu_selection == 4:
         break
     
