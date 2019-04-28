@@ -104,17 +104,3 @@ while True:
             print ("Category doesn't exist")   
     elif menu_selection == 4:
         break
-    
-#    y_or_n = input("Do you want to enter another recipe? y or n ")
-#
-#    if y_or_n[0].lower() == 'y':
-#
-#        entering = True
-#
-#    else:
-#
-#        entering = False
-#
-#        print("No more recipes to add")
-#
-#        break
