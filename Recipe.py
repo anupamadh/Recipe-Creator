@@ -37,7 +37,10 @@ def Menu():
     print ("2. List all recipes")
     print ("3. List recipes by Category (Starter/ Main Course/ Dessert)")
     print ("4. Quit")
-    return (int(input("Enter your choice.")))
+    try:
+        return (int(input("Enter your choice.")))
+    except ValueError:
+        print("Invalid input")
 
 while True:
     menu_selection = Menu()
